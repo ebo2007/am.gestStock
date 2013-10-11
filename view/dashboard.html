@@ -1,0 +1,76 @@
+<div class="dashboard">
+	<section>
+		<div class="head">Dates</div>
+		<ul>
+			<li class="frnt"><a>Derniére B.C.Fourniture de Bureau</a><em></em></li>
+			<li class="matr"><a>Derniére B.C.Materiél de Bureau</a><em></em></li>
+			<li class="mobi"><a>Derniére B.C.Mobilier de Bureau</a><em></em></li>
+			<li class="info"><a>Derniére B.C.Materiél Informatique</a><em></em></li>
+		</ul>
+		<div></div>
+	</section>
+	<section class="warn">
+		<div class="head">Avertissements</div>
+		<table class="dash"> 
+		  <thead> 
+		    <tr>
+		        <th width="20.1%">NUMERO BC</th>
+				<th width="42.7%">PRODUIT</th>
+				<th width="10%">ENTREE</th>
+				<th width="10%">SORTIE</th>
+				<th width="10%">STOCK FINAL</th>
+				<th width="5%" class="warning"></th>
+		      	<th width="2.3%"></th> 
+		    </tr> 
+		  </thead> 
+		  <tbody> 
+		    <tr>
+		      <td colspan="7" valign="top" class="tdbody"> 
+		        <div class="dbody"> 
+		        	<table style="color:midnightblue;"></table> 
+		        </div> 
+		      </td> 
+		    </tr> 
+		  </tbody> 
+		</table> 
+	</section>
+	<section class="last">
+		<div class="head">Derniére Livraison : </div>
+		<table class="dash"> 
+		  <thead> 
+		    <tr>
+		        <th width="13%">NUMERO BC</th>
+				<th width="25%">PRODUIT</th>
+				<th width="40.5%">SERVICE OU PERSON</th>
+				<th width="10%">DATE LIVRAISON</th>
+				<th width="10%">QTE LIVREE</th>
+		      	<th width="1.5%"></th> 
+		    </tr> 
+		  </thead> 
+		  <tbody> 
+		    <tr>
+		      <td colspan="6" valign="top" class="tdbody"> 
+		        <div class="dbody"> 
+		        	<table style="color:midnightblue;" class="last"></table> 
+		        </div> 
+		      </td> 
+		    </tr> 
+		  </tbody> 
+		</table> 
+	</section>
+	<section>
+		<div class="head">Stock Final de B.C</div>
+		<div style="overflow: hidden;">	
+			<div class="sleft">
+				<div>
+					<span>Année:  <select class="year"></select></span></br>
+					<span>B.C N°: <select class="bc"></select></span>
+				</div>
+			</div>
+			<div style="width:86.5%; float:left;">
+				<div id="chart"></div>
+				<!-- <span id="info" style="margin-left:20px;">Nothing yet</span> -->
+			</div>
+		</div>
+	</section>
+</div>

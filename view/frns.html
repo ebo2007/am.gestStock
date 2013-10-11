@@ -1,0 +1,42 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list"></ol>
+        </div>
+	</section>
+	<section class="parent">
+		<div class="form-cont">
+			<div class="header">gestion de fournisseurs</div>
+			<form id="form">
+				<div class="inp-div">
+					<input type="hidden" name="id" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>Raison sociale :</label><input type="text" name="nom" value="" label="Raison sociale" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Adresse :</label><textarea rows="8" cols="50" name="adresse" value="" label="Adresse" /></textarea>
+				</div>
+				<div class="inp-div">
+					<label>Téléphone :</label><input type="text" name="tel" value="" label="Téléphone" />
+				</div>
+				<div class="inp-div">
+					<label>Fax :</label><input type="text" name="fax" value="" label="Fax"/>
+				</div>
+				<div class="inp-div">
+					<label>Email :</label><input type="text" name="email" value="" label="Email"/>
+				</div>
+			</form>
+			<div class="btns">
+				<a href="#" id="reset" class="btn">Reset</a>
+				<a href="#" id="save" class="btn">Enregistrer</a>
+				<a href="#" id="delete" class="btn">Supprimer</a>
+			</div>
+			<div class="msg">&nbsp;
+				<span class="success"></span>
+				<span class="error"></span>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,183 @@
+/*############################# MAIN STYLE ################################*/
+
+div.main {
+    position:absolute; 
+    top:0; 
+    bottom:0; 
+    width:100%;
+    overflow: hidden;
+}
+div.main section.cnt {
+    float: left;
+    height: 100%;
+    position: relative;
+    background: #f0f9ff;
+    background: -ms-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+    background: linear-gradient(to bottom,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 );
+}
+div.main section#wrap {
+    width: 88%;
+    border: 3px solid gray;
+    /*margin: 0 auto;*/
+}
+div.main section.cnt:first-child {
+    width: 12%;
+    border-right: 3px solid gray;
+    padding: 0;
+    margin: 0;
+}
+/*######################## STYLE GENERALE DE L'ACCORDION ##################################*/
+.accordion {
+    color: #474747;
+    overflow: hidden;
+    height: 96.2%;
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.231;
+    font-family: sans-serif;
+}
+
+/*#################################### FIN ##################################################*/
+
+/*######################## STYLE EN OUVERTURE DE SECTION ##################################*/
+.accordion section.expand {
+    background: #fff;
+    height: 88%;
+}
+.accordion section.expand a {
+    color: #575757;
+    width: 100%;
+}
+
+.accordion section.expand:after {
+    left: -9999px;
+}
+.accordion section.expand ul {
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position:relative;
+}
+.accordion section.expand li {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    position: relative;
+    height: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    padding-top: 66px;
+}
+.accordion section.expand li:before {
+    content: url(../img/docs.png);
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height: 64px;
+    width: 64px;
+}
+.accordion section.expand:nth-child(2) li:first-child:before {
+    content: url(../img/people.png);
+}
+.accordion section.expand:nth-child(2) li:nth-child(2):before {
+    content: url(../img/frns.png);
+}
+.accordion section.expand:nth-child(2) li:nth-child(4):before {
+    content: url(../img/fourntures.png);
+}
+.accordion section.expand:nth-child(3) li:first-child:before {
+    content: url(../img/livraison.png);
+}
+.accordion section.expand:nth-child(3) li:nth-child(2):before {
+    content: url(../img/people.png);
+}
+.accordion section.expand:nth-child(3) li:nth-child(3):before {
+    content: url(../img/stock.png);
+}
+.accordion section.expand:nth-child(4) li:first-child:before {
+    content: url(../img/bulletin.png);
+}
+.accordion section.expand:nth-child(4) li:nth-child(2):before {
+    content: url(../img/fiche.png);
+}
+.accordion section.expand:nth-child(4) li:nth-child(3):before {
+    content: url(../img/stock.png);
+}
+/*#################################### FIN ##################################################*/
+
+/*######################## STYLE EN FERMETURE DE SECTION ###################################*/
+.accordion section a,  div.main section.cnt:first-child a {
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+.accordion section {
+    height: 30px;
+    background: #333;
+    color: #333;
+    overflow: hidden;
+    margin: 2px 0;
+
+    background: #f0f9ff;
+    background: -ms-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+    background: linear-gradient(to bottom,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 );
+}
+.accordion section:first-child {
+    margin-top: 0;
+}
+.accordion section ul {
+    display: none;
+}
+/*#################################### FIN ##################################################*/
+/*#######################################STYLE DE L'ARRIERE PLAN DE LINK ##########################*/
+.bg {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(top,#fff,#e6e6e6);
+    background-image: -ms-linear-gradient(top,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    color: #333;
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled= false);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e6e6e6',GradientType=0);
+}
+.bg:hover {
+    background-color: #e6e6e6;
+    background-position: 0 -15px;
+    color: #575757;
+    ms-transition: background-position .1s linear;
+    text-decoration: none;
+    transition: background-position .1s linear;
+}
+.bg:active {
+    background-color: #d9d9d9 \9;
+    background-color: #e6e6e6;
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    outline: 0;
+}
+.logout {
+    //border: 2px solid #023972 !important;
+    font-family: sans-serif;
+    margin-top: 2px;
+}
+.logout:before {
+    content: url(../img/logout.png);
+    position: absolute;
+    top: 10;
+    left: 30px;
+    width: 16px;
+    height: 16px;
+}

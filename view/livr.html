@@ -1,0 +1,162 @@
+<style type="text/css">
+	#pannier,  #person {min-height: 10em; margin-bottom: 5px;}
+	#pannier h4, #person h4 { line-height: 16px; margin: 0 0 0.4em; }
+ 	#pannier h4 .ui-icon, #person h4 .ui-icon{ float: left; }
+</style>
+<script type="text/javascript">
+	$(function() {
+    	var pannier  = $( "#pannier" ),
+    		materiel = $( "#materiel" ),
+    		person   = $( "#person" ),
+    		list     = $( "#list" );
+ 
+    // let the gallery items be draggable
+    $( "li", list ).draggable({
+      cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+      revert: "invalid", // when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
+ 
+    // let the trash be droppable, accepting the gallery items
+    person.droppable({
+      accept: "#list li",
+      activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+        deleteImage( ui.draggable );
+      }
+    });
+ 
+    // let the gallery be droppable as well, accepting items from the trash
+    list.droppable({
+      accept: "#person > li",
+      activeClass: "custom-state-active",
+      drop: function( event, ui ) {
+        recycleImage( ui.draggable );
+      }
+    });
+ 
+    // image deletion function
+    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+    function deleteImage( $item ) {
+      $item.fadeOut(function() {
+        var $list = $( "ol", person ).length ?
+          $( "ol", person ) :
+          $( "<ol class='gallery ui-helper-reset'/>" ).appendTo( person );
+ 
+        $item.find( "a.ui-icon-trash" ).remove();
+        $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+          /*$item
+            .animate({ width: "48px" })
+            .find( "img" )
+              .animate({ height: "36px" });*/
+              alert ("delete");
+        });
+      });
+    }
+ 
+    // image recycle function
+    var trash_icon = "<a href='link/to/trash/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-trash'>Delete image</a>";
+    function recycleImage( $item ) {
+      $item.fadeOut(function() {
+        $item
+          .find( "a.ui-icon-refresh" )
+            .remove()
+          .end()
+          .css( "width", "96px")
+          .append( trash_icon )
+          .find( "img" )
+            .css( "height", "72px" )
+          .end()
+          .appendTo( list )
+          .fadeIn();
+      });
+    }
+
+    // resolve the icons behavior with event delegation
+    $( "ol.list li span" ).click(function( event ) {
+      var $item = $( this ),
+        $target = $( event.target );
+ alert("clicking");
+      if ( $target.is( "a.ui-icon-trash" ) ) {
+        deleteImage( $item );
+      } else if ( $target.is( "a.ui-icon-zoomin" ) ) {
+        viewLargerImage( $target );
+      } else if ( $target.is( "a.ui-icon-refresh" ) ) {
+        recycleImage( $item );
+      }
+ 		
+      return false;
+    });
+  });
+</script>
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol id="list" class="list"></ol>
+        </div>
+	</section>
+	<section class="parent">
+		<div class="form-cont">
+			<div class="header">gestion de livraison</div>
+			<div id="pannier" class="ui-widget-content ui-state-default">
+				<h4 class="ui-widget-header"><span class="ui-icon ui-icon-cart"></span> Pannier</h4>
+			</div>
+			<div id="person" class="ui-widget-content ui-state-default">
+				<h4 class="ui-widget-header"><span class="ui-icon ui-icon-person"></span> Bénéficiaire</h4>
+			</div>
+			<form id="form">
+				<div class="inp-div">
+					<input type="hidden" name="id" value=""/>
+					<input type="hidden" name="invt" value=""/>
+				</div>
+				<!-- <div class="inp-div">
+					<label>B.C N° :</label>
+					<select id="dvs" data-placeholder="Choisissez un Bon de Commande..." class="chzn-select" name="bc"  label="B.C N°" required></select>* 
+				</div>-->
+				<div class="inp-div">
+					<label>Matériel :</label>
+					<select id="srv" data-placeholder="Choisissez un Matériel..." class="chzn-select" name="materiel" label="Matériel" required></select>*
+				</div>
+				<div class="inp-div">
+					<label>N° Inventaire :</label>
+					<div class="invt"></div>
+					<div style="clear:left;"></div>
+				</div>
+				<div class="inp-div">
+					<label>Qté Demandée :</label><input type="text" name="qteDemandee" value="" label="Quantité Demandée" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Qté Livrée :</label><input type="text" name="qteLivree" value="" label="Quantité Livrée" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Date Livraison :</label><input type="text" name="dateLivraison" value="" label="Date de Livraison" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Signé par :</label>
+					<select id="pers" data-placeholder="Choisissez un Person..." class="chzn-select" name="signe"  label="Signé par"></select>
+				</div>
+				<div class="inp-div">
+					<label>Observation :</label><textarea  name="observation" value=""></textarea>
+				</div>
+			</form>
+			<div class="btns">
+				<a href="#" id="reset" class="btn">Reset</a>
+				<a href="#" id="save" class="btn">Enregistrer</a>
+				<a href="#" id="delete" class="btn">Supprimer</a>
+			</div>
+			<div class="msg">&nbsp;
+				<span class="success"></span>
+				<span class="error"></span>
+			</div>
+		</div>
+	</section>
+	<section class="parent">
+		<div class="filter-cnt">
+			<select id="dvs" data-placeholder="Choisissez un Bon de Commande..." class="chzn-select" name="bc"  label="B.C N°" required></select>
+			<ol id="materiel" class="materiel ui-helper-reset ui-helper-clearfix"></ol>
+        </div>
+	</section>
+</div>

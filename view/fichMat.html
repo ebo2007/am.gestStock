@@ -1,0 +1,70 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list"></ol>
+        </div>
+	</section>
+	<section class="parent">
+        <div class="blt">
+			<section><ol class="person"></ol></section>
+			<section id="printCnt">
+				<div id="impression">
+					<link rel="stylesheet" type="text/css" href="css/print.css">
+					<style type="text/css">
+						div#impression li span.desc {
+						    text-transform: none;
+						    font-weight: normal;
+						    width: 350px;
+						}
+						div#impression div.exercice {
+						    float: right;
+						    font-weight: normal;
+						    margin: 10px 20px;
+						}
+						div#impression div.clear {
+						    clear: both;
+						    display: none;
+						    border: 1px solid;
+						}
+					</style>
+					<center><img src="img/tete.png" width="100%" height="96"/></center>
+					<div class="exercice">Exercice : <span>.............</span></div>
+					<div class="clear"></div>
+					<ul>
+						<li>DESIGNATION : 
+							<span class="materiel">....................................</span><br/>
+							<span class="desc">.............................................................................................<br/>
+								...................................................................................................
+							</span>
+						</li>
+						<br/>
+						<li>Marché ou B.C. N° : <span class="numMarche">...................</span></li>
+						<li>Visa N° : <span class="numVisa">...................</span></li>
+						<li>Facture N° : <span class="numFact">...................</span></li>
+						<li>Fournisseurs : <span class="frns">............</span></li>
+					</ul>					
+					<table>
+						<thead>
+							<tr>
+								<th width="10%">INV. N°</th>
+								<th width="33%">Service Bénéficiaire</th>
+								<th width="7%">B/M N°</th>
+								<th width="30%">Signée par</th>
+								<th width="20%">Observation</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<div class="tmp"></div>
+					<div class="bas"><img src="img/bas.png"/></div>
+				</div>
+			</section>
+		</div>
+		<a href="" class="print" onclick="appFn.print()"></a>
+	</section>
+</div>
+
+
+

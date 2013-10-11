@@ -1,0 +1,53 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list"></ol>
+        </div>
+	</section>
+	<section class="parent">
+        <div class="blt">
+			<section><ol class="person"></ol></section>
+			<section id="printCnt">
+				<div id="impression">
+					<link rel="stylesheet" type="text/css" href="css/print.css">
+					<style type="text/css">
+						div#impression tfoot td {
+						    height: 20px;
+						}
+						div#impression thead, div#impression tfoot  {
+						    background: #fafafa;
+						}
+					</style>
+					<center><img src="img/tete.png" width="100%" height="96"/></center>
+					<center><ul style="padding-left:0;">
+						<li><span>- Fiche des Fournitures de Stock -</span></li>
+						<li><span class="fourniture">...................</span></li>
+						<li>B.C. N° : <span class="numBc">............</span></li>
+					</ul></center>					
+					<table>
+						<thead>
+							<tr>
+								<th width="20%">Date</th>
+								<th width="35%">Service  (Personne)</th>
+								<th width="15%">ENTREE</th>
+								<th width="15%">SORTIE</th>
+								<th width="15%">STOCK</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						<tfoot align="right" valign="middle" style="font-weight:bold;">
+						</tfoot>
+					</table>
+					<div class="tmp"></div>
+					<div class="bas"><img src="img/bas.png"/></div>
+				</div>
+			</section>
+		</div>
+		<a href="" class="print" onclick="appFn.print()"></a>
+	</section>
+</div>
+
+
+

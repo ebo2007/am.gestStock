@@ -1,0 +1,158 @@
+/*######################## STYLE GENERALE DE L'ACCORDION ##################################*/
+.toggle {
+	color: #474747;
+	margin: 10px auto;
+	overflow: hidden;
+	padding: 10px;
+	width: 98%;
+	border-radius: 5px;
+	position: relative;
+	font-size: 13px;
+	line-height: 1.231;
+	font-family: sans-serif;
+}
+.toggle div.vie {
+	font: 17px Candara,Calibri,'Lucida Sans Unicode',Arial,sans-serif;
+	padding: 50px;
+}
+.toggle:before {
+	content: url(../img/contacts.png);
+	position: relative;
+	height: 100px;
+	left: 40px;
+}
+/*.toggle:after {
+	content: "Bulletin de Mouvement";
+	position: absolute;
+	left: 150px;
+	top: 50px;	
+    text-transform:uppercase;
+    font: bold 30px Tahoma,Helvetica,Arial,Sans-Serif;
+    color: #222222;text-shadow: 0 2px 3px #555555;
+}
+.toggle section a:before {
+	content: url(../img/call-group.png);
+	position: relative;
+	top: 5px;
+	padding: 5px;
+}*/
+.toggle section a:after {
+	content: url(../img/down.png);
+	position: absolute;
+	right: 10px;
+	top: 7px;
+}
+/*#################################### FIN ##################################################*/
+
+/*######################## STYLE EN OUVERTURE DE SECTION ##################################*/
+.toggle section.expand {
+	background: #fff;
+	height: auto;
+	border:1px solid;
+	font: 14px Candara,Calibri,'Lucida Sans Unicode',Arial,sans-serif;
+	position: relative;
+}
+.toggle section.expand a {
+	color: #272822;
+	width: 100%;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #000;
+	border-radius: 5px 5px 0 0;
+	position: relative;
+	padding: 5px;
+}
+.toggle {
+	height: auto;
+}
+
+.toggle section.expand:after {
+	left: -9999px;
+}
+.toggle section.expand a:after {
+	content: url(../img/up.png);
+	position: absolute;
+	right: 10px;
+	top: 7px;
+}
+.toggle section.expand table {
+	display: block;
+	/*table-layout: fixed;*/
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid;
+}
+.toggle section.expand div.tcnt {
+	overflow-y: auto; 
+	overflow-x: hidden; 
+	display:block;
+	max-height: 350px;
+	width: 100%;
+	position: relative;
+}
+
+.toggle section.expand thead tr {
+	background-color: rgb(140, 169, 207) !important;
+}
+
+
+.toggle section.expand td,
+.toggle section.expand th {
+	border: 1px solid;
+	padding: 3px;
+}
+.toggle section.expand th:nth-child(2),
+.toggle section.expand th:nth-child(3),
+.toggle section.expand td:nth-child(2),
+.toggle section.expand td:nth-child(3) {
+	width: 16%;
+}
+.toggle section.expand th:first-child,
+.toggle section.expand th:nth-child(4),
+.toggle section.expand th:nth-child(5),
+.toggle section.expand td:first-child,
+.toggle section.expand td:nth-child(4),
+.toggle section.expand td:nth-child(5) {
+	width: 6.5%;
+	text-align: center;
+}
+.toggle section.expand th:nth-child(6),
+.toggle section.expand td:nth-child(6) {
+	width: 8%;
+	text-align: center;
+}
+.toggle section.expand tr:nth-child(even) {
+	background-color:  rgb(214, 224, 239);
+}
+.toggle section.expand tr:nth-child(odd) {
+	background-color: rgb(238, 242, 249);
+}
+/*#################################### FIN ##################################################*/
+
+/*######################## STYLE EN FERMETURE DE SECTION ###################################*/
+.toggle section a {
+	text-decoration: none;
+	border: 1px solid;
+	border-radius: 5px;
+	position: relative;
+	width: 99.7%;
+	height: 30px;
+	display: block;
+	padding: 5px;
+	color: #272822;
+}
+.toggle section {
+	height: 30px;
+	color: #333;
+	margin: 8px;
+	overflow: hidden;
+	border-radius: 5px;
+	font: 17px Candara,Calibri,'Lucida Sans Unicode',Arial,sans-serif;
+	position: relative;
+}
+.toggle section table {
+	display: none;
+}
+/*#################################### FIN ##################################################*/

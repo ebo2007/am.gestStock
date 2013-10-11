@@ -1,0 +1,52 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+        </div>
+	</section>
+	<section class="parent">
+		<div class="form-cont">
+			<div class="header">gestion de personnel</div>
+			<form id="form">
+				<div class="inp-div">
+					<input type="hidden" name="id" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>Division :</label>
+					<select id="dvs" data-placeholder="Choisissez une Division..." class="chzn-select" name="division"></select>
+				</div>
+				<div class="inp-div">
+					<label>Service :</label>
+					<select id="srv" data-placeholder="Choisissez un Service..." class="chzn-select" name="service"></select>
+				</div>
+				<div class="inp-div">
+					<label>Nom & Prénom :</label><input type="text" name="nom" value="" label="Nom & Prénom" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Grade :</label><input type="text" name="grade" value="" label="Grade" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Echelle :</label><input type="text" name="echelle" value="" label="Echelle" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Post Tél :</label><input type="text" name="post" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>Tél :</label><input type="text" name="tel" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>Email :</label><input type="text" name="email" value=""/>
+				</div>
+			</form>
+			<div class="btns">
+				<a href="#" id="reset" class="btn">Reset</a>
+				<a href="#" id="save" class="btn">Enregistrer</a>
+				<a href="#" id="delete" class="btn">Supprimer</a>
+			</div>
+			<div class="msg">
+				<span class="success"></span>
+				<span class="error"></span>
+			</div>
+		</div>
+	</section>
+</div>

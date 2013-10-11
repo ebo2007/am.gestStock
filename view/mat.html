@@ -1,0 +1,52 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list"></ol>
+        </div>
+	</section>
+	<section class="parent">
+		<div class="form-cont">
+			<div class="header">gestion de materiels</div>
+			<form id="form">
+				<div class="inp-div">
+					<input type="hidden" name="id" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>B.C N° :</label>
+					<select id="dvs" data-placeholder="Choisissez un Bon de Commande..." class="chzn-select" name="numMarche" label="Bon de Commande N°" required></select>*
+				</div>
+				<div class="inp-div">
+					<label>Désignation :</label><input type="text" name="nom" value="" label="Désignation" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Description :</label><textarea  name="desc" value=""></textarea>
+				</div>
+				<div class="inp-div">
+					<label>Qté Entrée:</label><input type="text" name="qteInitial" value="" label="Qté Entrée" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Stock Final :</label><input type="text" name="qteFinal" value="" label="Stock Final" readonly/>
+				</div>
+				<div class="inp-div">
+					<label>Inventaire :</label><input type="text" name="invt" value="" label="Inventaire" required/>*
+				</div>
+				<div class="inp-div">
+					<label>N° de Visa :</label><input type="text" name="numVisa" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>N° de facture :</label><input type="text" name="numFacture" value=""/>
+				</div>
+			</form>
+			<div class="btns">
+				<a href="#" id="reset" class="btn">Reset</a>
+				<a href="#" id="save" class="btn">Enregistrer</a>
+				<a href="#" id="delete" class="btn">Supprimer</a>
+			</div>
+			<div class="msg">&nbsp;
+				<span class="success"></span>
+				<span class="error"></span>
+			</div>
+		</div>
+	</section>
+</div>

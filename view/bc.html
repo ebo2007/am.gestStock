@@ -1,0 +1,48 @@
+<div class="pers">
+
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list">
+				<div><span class="head">B.C. de Fournitures</span></div>
+				<div><span class="head">B.C. de Materiéls</span></div>
+			</ol>
+        </div>
+	</section>
+	<section class="parent">
+		<div class="form-cont">
+			<div class="header">gestion de bon de commande</div>
+			<form id="form">
+				<div class="inp-div">
+					<input type="hidden" name="id" value=""/>
+				</div>
+				<div class="inp-div">
+					<label>Numéro B.C :</label><input type="text" name="nom" value="" label="Numéro B.C" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Intitulé :</label><input type="text" name="intitule" value="" label="Intitulé" required/>*
+				</div>
+				<div class="inp-div">
+					<label>Nature :</label>
+					<select id="dvs" data-placeholder="Choisissez une Nature ..." class="chzn-select" name="nature" label="Nature" style="width:75%;" required></select><div class="add"></div>*
+				</div>
+				<div class="inp-div">
+					<label>Fournisseur :</label>
+					<select id="srv" data-placeholder="Choisissez un Fournissour ..." class="chzn-select" name="fournisseur" label="Fournisseur" required></select>*
+				</div>
+				<div class="inp-div">
+					<label>Date B.C :</label><input type="date" name="datebc" value="" label="Date B.C" required/>*
+				</div>
+			</form>
+			<div class="btns">
+				<a href="#" id="reset" class="btn">Reset</a>
+				<a href="#" id="save" class="btn">Enregistrer</a>
+				<a href="#" id="delete" class="btn">Supprimer</a>
+			</div>
+			<div class="msg">&nbsp;
+				<span class="success"></span>
+				<span class="error"></span>
+			</div>
+		</div>
+	</section>
+</div>

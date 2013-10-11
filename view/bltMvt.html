@@ -1,0 +1,58 @@
+<div class="pers">
+	<section class="parent">
+        <div class="filter-cnt">
+	        <input type="text" class="filter-input" id="filter" value="" />
+			<ol class="list">
+				<div><span class="head">B.C. de Fournitures</span></div>
+				<div><span class="head">B.C. de Materiéls</span></div>
+			</ol>
+        </div>
+	</section>
+	<section class="parent">
+        <div class="blt">
+			<section><ol class="person"></ol></section>
+			<section id="printCnt">
+				<div id="impression">
+					<link rel="stylesheet" type="text/css" href="css/print.css">
+					<center><img src="img/tete.png" width="100%" height="96"/></center>
+					<ul>
+						<li>Bulletin de Mouvement : <span class="nature">................................................</span></li>
+						<li>Division : <span class="division">..........................................................</span></li>
+						<li>Service : <span class="service">.............................................</span></li>
+						<li>Bureau : <span class="bureau">....................................................</span></li>
+					</ul>					
+					<table>
+						<thead>
+							<tr>
+								<th rowspan="2" width="37%">Désignation</th>
+								<th colspan="2"width="26%">Qté</th>
+								<th rowspan="2" width="37%">Observation</th>
+							</tr>
+							<tr>
+								<th >Demandée</th>
+								<th >Livrée</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+						<tfoot>
+							<tr>
+								<td align="center" valign="top"><strong>Chef de Service</strong></td>
+								<td colspan="2" align="center" valign="top"><strong>Magasinier</strong></td>
+								<td align="center" valign="top"><strong>Certification De Reception</strong>
+									<div align="left">Date: <span class="date">.../.../...</span></div>
+									<div align="left" style="white-space: nowrap;">Non et Prénom: <span class="signe">....................................</span></div>
+									<div align="left">SIGNATURE: </div>
+								</td>
+							</tr>	
+						</tfoot>
+					</table>
+					<div class="bas"><img src="img/bas.png"/></div>
+				</div>
+			</section>
+		</div>
+		<a href="" class="print" onclick="appFn.print()"></a>
+	</section>
+</div>
+
+
+
